@@ -151,4 +151,48 @@
 + 标签必须关闭  
 + 属性值必须用引号  
 + 标签必须正确嵌套
-+ 必须添加文档类型声明 
++ 必须添加文档类型声明   
+
+### HTML应用CSS  
+
+css是层叠样式表的缩写，从html4开始使用，是为了更好地渲染HTML元素  
+
+css主要通过三种方式添加到HTML中：  
++ 内联样式： 在HTML标签中使用style属性  
++ 内部样式表： 在HTML文档头部使用style元素来调用css  
++ 外部引用： 使用外部css文件  
+
+#### 内联样式  
+当特殊样式应用到个别元素时，可以在元素单独使用style属性  
+
+```html
+//这个例子定义了该段落的字体颜色，背景颜色，左边距的属性  
+<p style="color: blue;background-color:gray;margin-left: 10px">this is a paragraph..</p>
+
+//这个例子演示字体与对齐
+<h1 style="font-family: Ani;font-size: 40px">A Title</h1>
+<p style="text-align: center">使用text-align的属性替代center标签</p>
+```  
+
+#### 内部样式表  
+当特殊样式应用到整个HTML文件时，可以使用内部样式表  
+```html
+<head>
+<style type="text/css">
+body{background-color: blueviolet}
+p{color: aqua;font-size: 12px;text-align: center}
+
+</style>
+</head>
+
+
+```  
+#### 外部样式表  
+当特殊样式应用到很多页面时，可以使用外部样式表，这个时候需要创建.css文件，然后在HTML头部使用link标签导入  
+```html
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css文件路径/xx.css"> 
+</head>
+</html>
+``` 
