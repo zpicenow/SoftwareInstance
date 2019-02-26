@@ -129,6 +129,11 @@
 <a href="#名字">to'name'</a>
 <p>无关段落</p>
 <h3><a name="名字">我是标题3，也是要跳转的地方</a> </h3>
+//或者使用id属性，作用和name相同
+<a href="#name">to 'name'</a>
+<p>wuguan </p>
+
+<p><a id="name">to here</a> </p>
 
 //在新页面打开链接，只需将target设置为_blank
 <a href="xxxxxx" target="_blank">新页面打开</a>
