@@ -73,7 +73,7 @@
 ```html
 <table border="1">
 <tr>
-<td>1</td>
+<td colspan="2">1</td>
 <td>2</td>
 <td>3</td>
 </tr>
@@ -81,7 +81,8 @@
 </table>
 
 
-```
+```  
+colspan 是跨列数；rowspan是跨行数;th标签是表头
 
 + 表单标签：  form为用户创建输入表单，
 ```html
@@ -93,7 +94,27 @@
     <input type="checkbox" name="insex">
 </form>
 ```
-  
+input类型有很多种，包括submit和reset，分别是提交和重置键，对于动态链接  
+```html
+<form action="www.xxx" method="get/post"></form>
+```  
+其中get方法将数据写在地址栏上，获取方便但不安全  
+post方法将数据放到内存中，更安全  
+value属性是显示在页面的内容  
+输入框的size是显示的长度，maxlength是允许输入的最大长度  
+radio作为单选框，两个name要相同，而checkbox是复选框，各名字不能相同  
+
++ 文件域，form的type是file，结合submit上传  
+
++ 下拉菜单：   
+```html
+<select name="xx" style="width: 30%">
+    <option value="0">No1</option>
+    <option value="0">No2</option>
+    <option value="0">No3</option>
+    <option value="0">&copy</option>
+</select>
+```
 
 
 + 图像标签与属性  ：图片地址有相对地址和绝对地址两类，相对地址主要有相对文件路径等，
@@ -152,6 +173,50 @@
 + 属性值必须用引号  
 + 标签必须正确嵌套
 + 必须添加文档类型声明   
+
+
+#### 特殊符号  
++ 空格： &nbsp  
++ 大于号： &gt  
++ 小于号：&lt
++ 引号： &quot
++ 版权号： &copy
+
+
+### 框架  
+很多网页顶部有不变的logo，左侧是固定的导航栏，当点击导航栏时只有右侧的区域随之变动，像这种只有部分区域响应变化的布局，就是用框架实现的
+#### frameset  
+frameset不能和body同用
+```html
+<frameset columns="25%,50%,*" rows="50%, *">
+    <frame src="xxx/xx.html" name="xx"/>
+    <frame src="xxx/xxx.html" name="xxx" scrolling="no" noresize="noresize">
+</frameset>
+```  
+第一行是按列划分为占比25,50，和25的三部分，*就是代表余下全部  
+最后一行scrolling设置的是不显示滚动条，noresize设置的是图片不拉伸  
+下面的代码可以实现上面说的T型布局，   
+```html
+<frameset rows="20%,*">
+    <frame>logo
+    <frameset columns="20%,*">
+        <frame>左侧导航栏
+        <frame name="rightframe">显示区
+    </frameset>
+</frameset>
+
+<!--然后对于触发链接只要在target指定目的域即可，目的域就是前文命名的frame的name-->
+<a href="xxx" target="rightframe"></a>
+
+```
+#### iframe  
+frameset不能和body同用，这就造成了很多麻烦，因袭引入iframe  
+iframe使用非常简单  
+```html
+<iframe src="引用地址" name="标识" scrolling="no"/>
+```  
+相对于frameset更好，目前frameset官方已经不建议使用  
+
 
 ### HTML应用CSS  
 
