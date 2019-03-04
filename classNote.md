@@ -296,3 +296,56 @@ id选择器类似类选择器，其实符号是井号#而不是点  ,一般与di
 <div id="id名">....</div>
 
 ```  
+
+#### 盒模型  
++ 控件的margin：　外边距    ： 　
++ 控件的padding： 内边距
++ border： 边框  
+
+控件居中：  
+
+父元素 text-align:center  
+子元素 display:inline-block  
+
+#### 限制CSS ：  
+
+```html
+.lis li{
+            list-style: none;
+            float: left;
+            padding-right: 20px;
+        }
+```  
+
+对于lis类中的li标签进行更改  
+
+#### 鼠标悬停更改：  
+
+```html
+h4:hover{
+            color: brown;
+        }
+```  
+对于h4这个标签，鼠标悬停时的动作，其他标签语法形式一样  
+比如鼠标悬浮时更改背景图  
+
+```html
+.nav a:hover{
+            background-color: blueviolet;
+        }
+
+<div class="nav">
+
+    <a href="http://www.baidu.com" >baidu</a>
+</div>
+```  
+
+对于使用nav标签下的超链接，鼠标悬浮时更改背景色  
+
+#### css复用  
+
+class里面可以写多个类，用空格区分；  
+
+
+# 第二部分——JavaScript  
+-----

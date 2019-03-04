@@ -6,10 +6,26 @@
         h1 {
             color: aqua;
 
+
+        }
+        h4:hover{
+            color: brown;
         }
         p {
             color: blue;
 
+        }
+
+        .nav a:hover{
+            background-color: blueviolet;
+        }
+        .lis li{
+            list-style: none;
+            float: left;
+            padding-right: 20px;
+        }
+        #box{
+            margin: auto;
         }
     </style>
 
@@ -25,6 +41,8 @@
 
 
 </dl>
+
+
 <h4>4thtitle</h4>
 <h5>5thtitle</h5>
 <h6>6thtitle min</h6>
@@ -79,7 +97,7 @@
 <hr/>
 
 <ol>
-    <li>coffee</li>
+    <li class="lis">coffee</li>
     <li>tea</li>
     <li>water</li>
 
@@ -104,8 +122,10 @@
     </tr>
 
 </table>
+<div class="nav">
 
-<a href="http://www.baidu.com">baidu</a>
+    <a href="http://www.baidu.com" >baidu</a>
+</div>
 
 <form>
     name:
@@ -124,32 +144,35 @@
     </ul>
 </div>
 
+<div style="text-align: center">
+    <form style="display: inline-block">
+        <table border="2" bgcolor="#7fffd4">
+            <tr>
+                <td>
+                    <input type="checkbox">
+                </td>
+                <td>
+                    <input type="checkbox">
+                </td>
+                <td>
+                    <input type="checkbox">
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+        </table>
+    </form>
+</div>
 
-<form>
-    <table border="2" bgcolor="#7fffd4">
-        <tr>
-            <td>
-                <input type="checkbox">
-            </td>
-            <td>
-                <input type="checkbox">
-            </td>
-            <td>
-                <input type="checkbox">
-            </td>
-        </tr>
-        <tr>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-        </tr>
-        <tr>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-        </tr>
-    </table>
-</form>
+
 
 <form style="background-color: aquamarine">
     <input type="text"><br/>
