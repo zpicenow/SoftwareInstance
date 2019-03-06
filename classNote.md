@@ -390,4 +390,9 @@ x.innerHTML="Hello JavaScript";    //改变内容
 窗口属性  
 对象事件  
 
-日期数据中天数是1-31，而年月都是0到n-1
+日期数据中天数是1-31，而年月都是0到n-1  
+
+三种访问页面元素的方式  
+getElementsByID
+getElementsByName
+getElementsByTagName  
