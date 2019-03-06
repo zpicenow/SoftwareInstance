@@ -348,4 +348,46 @@ class里面可以写多个类，用空格区分；
 
 
 # 第二部分——JavaScript  
------
+-----  
+
+脚本语言，网页加载时解析；在用户端可以禁用  
+
+嵌入HTML时放在head里，用script标签,
+```html
+    <script type="text/javascript">
+        document.write("print xxx");
+        document.write("<h4>wangwangaw</h4>");
+    </script>
+```  
+script里面的标签受head中css style的限定；  
+
++ prompt: 读取用户输入  
++ alert： 网页输出，强制型对话框，优先显示对话框内容  
+
+```html
+<button type="button" onclick="aaa()">button</button>
+<script>
+    function aaa() {
+        window.alert("gugugu");
+        document.write("<h1>gugugu</h1>");
+
+    }
+</script>
+```  
+改变HTML内容  
+```html
+x=document.getElementById("demo")  //查找元素
+x.innerHTML="Hello JavaScript";    //改变内容
+```
+#### windows对象属性  
++    JavaScript document 对象
++    JavaScript frames 对象
++    JavaScript history 对象
++    JavaScript location 对象
++    JavaScript navigator 对象
++    JavaScript screen 对象  
+
+窗口属性  
+对象事件  
+
+日期数据中天数是1-31，而年月都是0到n-1
