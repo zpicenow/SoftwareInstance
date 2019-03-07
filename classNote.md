@@ -350,7 +350,13 @@ class里面可以写多个类，用空格区分；
 # 第二部分——JavaScript  
 -----  
 
+#### 特性
 脚本语言，网页加载时解析；在用户端可以禁用  
+在 JavaScript 中，用分号来结束语句是可选的。  
+
+JavaScript 是脚本语言。浏览器会在读取代码时，逐行地执行脚本代码。而对于传统编程来说，会在执行前对所有代码进行编译。
+
+#### 使用位置
 
 + 嵌入HTML时放在head里，用script标签,
 ```html
@@ -359,6 +365,9 @@ class里面可以写多个类，用空格区分；
         document.write("<h4>wangwangaw</h4>");
     </script>
 ```  
+
+如果在文档已完成加载后执行 document.write，整个 HTML 页面将被覆盖：
+
 script里面的标签受head中css style的限定；  
 
 + script可以放在head部分，也可以放在body部分  
@@ -404,7 +413,7 @@ document.getElementById("demo").innerHTML="My First JavaScript Function";
 </html>
 ```
 
-此时外部标签中不再包含script标签  
+此时外部js代码中不再包含script标签  
 
 
 + prompt: 读取用户输入  
@@ -424,7 +433,77 @@ document.getElementById("demo").innerHTML="My First JavaScript Function";
 ```html
 x=document.getElementById("demo")  //查找元素
 x.innerHTML="Hello JavaScript";    //改变内容
+```  
+
+在文本字符串中使用反斜杠对代码行进行换行
+```javascript
+document.write("Hello \
+World!");
 ```
+### 变量  
+
+js使用var 关键字创建一个变量，变量类型是隐式的，通过赋值来限定数据类型，一般只关心数字和字符串两种  
+
+变量声明却没有赋值的默认值是undefined,undefined表示没有值，而null表示值为null  
+
+重新声明变量后值不会丢失，比如  
+
+```javascript
+var s = "gugugu";
+var s;
+```  
+
+之后s的值仍然是字符串gugugu  
+js中的变量是动态变量，可以通过不断赋值来改变类型；  
+对于字符串的赋值双引号和单引号都可以，只要和字符串内部自带的引号区分开即可  
+下面演示一些变量实例：  
+
+```javascript
+var answer="He is called 'Bill'";
+var answer2='He is called "Bill"';
+
+var x1=34.00;      
+var x2=34;  
+var y=123e5;      // 12300000
+var z=123e-5;     // 0.00123
+
+var xx=true
+var yx=false
+
+//创建数组#1
+var arrs1 = new Array();
+cars[0]="Audi";
+cars[1]="BMW";
+cars[2]="Volvo";
+
+//#2
+var cars2=new Array("Audi","BMW","Volvo");
+//#3
+var cars3=["Audi","BMW","Volvo"];
+```
+
+#### 对象  
+对象由花括号分隔。在括号内部，对象的属性以名称和值对的形式 (name : value) 来定义。属性由逗号分隔：  
+
+```javascript
+var person={firstname:"Bill", lastname:"Gates", id:5566};
+// 空格和折行无关紧要。声明可横跨多行：
+var person={
+firstname : "Bill",
+lastname  : "Gates",
+id        :  5566
+};
+```  
+
+对象属性有两种寻址方式： 
+
+```javascript
+name=person.lastname;
+name=person["lastname"];
+```  
+
+
+
 #### windows对象属性  
 +    JavaScript document 对象
 +    JavaScript frames 对象
