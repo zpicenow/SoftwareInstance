@@ -352,7 +352,7 @@ class里面可以写多个类，用空格区分；
 
 脚本语言，网页加载时解析；在用户端可以禁用  
 
-嵌入HTML时放在head里，用script标签,
++ 嵌入HTML时放在head里，用script标签,
 ```html
     <script type="text/javascript">
         document.write("print xxx");
@@ -360,6 +360,52 @@ class里面可以写多个类，用空格区分；
     </script>
 ```  
 script里面的标签受head中css style的限定；  
+
++ script可以放在head部分，也可以放在body部分  
+
+```html
+<head>
+<script>
+function myFunction()
+{
+document.getElementById("demo").innerHTML="My First JavaScript Function";
+}
+</script>
+</head>
+<p id="demo">A Paragraph</p>
+<button type="button" onclick="myFunction()">Try it</button>
+
+```  
+其中getElementByID得到了id为demo的控件，即p，innerHTML方法是更改得到的控件的内容，再来看放在body部分实现的  
+
+```html
+<p id="demo">A Paragraph</p>
+
+<button type="button" onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction()
+{
+document.getElementById("demo").innerHTML="My First JavaScript Function";
+}
+</script>
+```  
+
+在body中创建脚本的区别是，只有当p对象载入后才能执行，更加严谨  
+
++ 也可以单独创建JavaScript文件，再导入  
+
+```html
+<!DOCTYPE html>
+<html>
+<body>
+<script src="myScript.js"></script>
+</body>
+</html>
+```
+
+此时外部标签中不再包含script标签  
+
 
 + prompt: 读取用户输入  
 + alert： 网页输出，强制型对话框，优先显示对话框内容  
