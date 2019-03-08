@@ -502,6 +502,36 @@ name=person.lastname;
 name=person["lastname"];
 ```  
 
+#### 函数  
+函数在最开始的点击事件中就展示过，js中的函数用function 关键字声明，如果需要传参的话，要在括号中写上参数名字，不用声明类别  
+
+```html
+<button onclick="myFunction('Bill Gates','CEO')">点击这里</button>
+
+<script>
+function myFunction(name,job)
+{
+alert("Welcome " + name + ", the " + job);
+}
+</script>
+```  
+#### 作用域与生命周期  
+在函数外声明的变量是全局变量，网页上的所有脚本和函数都能访问它。  
+JavaScript 变量的生命期从它们被声明的时间开始。
+
+局部变量会在函数运行以后被删除。
+
+全局变量会在页面关闭后被删除。  
+
+#### 运算符  
+
+js大部分运算符与其他语言通用  
+字符串可以用+连接  
+如果把数字与字符串相加，结果将成为字符串  
+
+逻辑运算符特殊的是有一个三等号===  
+也同时有双等号==  
+==是简单的等于，===是值和类型完全相等
 
 
 #### windows对象属性  
