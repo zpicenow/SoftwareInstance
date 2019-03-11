@@ -102,7 +102,7 @@ input类型有很多种，包括submit和reset，分别是提交和重置键，�
 post方法将数据放到内存中，更安全  
 value属性是显示在页面的内容  
 输入框的size是显示的长度，maxlength是允许输入的最大长度  
-radio作为单选框，两个name要相同，而checkbox是复选框，各名字不能相同  
+radio作为单选框，两个name要相同，  
 
 + 文件域，form的type是file，结合submit上传  
 
@@ -533,7 +533,33 @@ js大部分运算符与其他语言通用
 也同时有双等号==  
 ==是简单的等于，===是值和类型完全相等
 
+### DOM  
+document-object-model  
+关于如何获取、修改、添加或删除 HTML 元素的标准  
 
+
+#### 查看结点
+
++ getElementsByID : 返回带有指定 ID 的元素。
++ getElementsByName : 返回带有指定
++ getElementsByTagName : 返回包含带有指定标签名称的所有元素的节点列表（集合/节点数组）  
++ setAttribute/setAttribute：访问/修改属性　　
+
+```javascript
+var myimg = document.getElementsByTagName("img");
+alert(myimg.getAttribute("src"));
+```
+#### 创建增加结点  
+
++ createElement()
++ appendChild()
++ insertBefore()
++ cloneNode()   
+
+#### 删除和替换结点  
++ removeChild()  
++ replaceChild()
+ 
 #### windows对象属性  
 +    JavaScript document 对象
 +    JavaScript frames 对象
@@ -547,7 +573,4 @@ js大部分运算符与其他语言通用
 
 日期数据中天数是1-31，而年月都是0到n-1  
 
-三种访问页面元素的方式  
-getElementsByID
-getElementsByName
-getElementsByTagName  
+ 

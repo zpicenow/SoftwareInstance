@@ -7,6 +7,18 @@
         document.write("print xxx");
         document.write("<h4>wangwangaw</h4>");
 
+        function printFruit() {
+            var vas = document.getElementsByName("myc");
+            var str = [];
+            for (s in vas) {
+
+                if (vas[s].checked)
+                    str.push(vas[s].value)
+
+            }
+            alert(str);
+        }
+
 
     </script>
     <style type="text/css">
@@ -208,6 +220,16 @@
     <option value="0">No3</option>
     <option value="0">&copy</option>
 </select>
+<br/>
+
+<input type="checkbox" name="myc" value="apple" />apple
+<input type="checkbox" name="myc" value="banana"/>banana
+<input type="checkbox" name="myc" value="orange"/>orange
+<input type="checkbox" name="myc" value="pear"/>pear
+<input type="button" onclick="printFruit()" value="print"/>
+
+<br/>
+
 </body>
 
 </html>
