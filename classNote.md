@@ -557,6 +557,7 @@ alert(myimg.getAttribute("src"));
 + cloneNode()   
 
 #### 删除和替换结点  
+删除和替换只能父元素执行
 + removeChild()  
 + replaceChild()
  
@@ -567,6 +568,32 @@ alert(myimg.getAttribute("src"));
 +    JavaScript location 对象
 +    JavaScript navigator 对象
 +    JavaScript screen 对象  
+
+#### js鼠标事件  
+onclick
+onmouseover
+onmouseout
+onmousedown  
+
+获取滚动条滚动距离
+document.documentElement.scrollTop
+document.documentElement.scrollLeft  
+
+
+### 正则表达式  
++ /../ : 字符串的开始和结束  
++ ^ : 开始标志
++ $ : 结束标志
++ [] : 范围 \[0-9a-zA-Z] 
++ {} ： 范围限定，常配合【】使用，{5,9}五到九位；{3}三位；{,7}零到七位；{3,}三位以上  
++ s : 任意空白字符  
++ S ： 任意非空白字符  
++ . : 除换行外任意字符
++ \d : 数字  
++ \D : 除数字外的字符  
++ \w ： 数字大小写字母下划线  
++ \W : 除了数字大小写字母下划线外
+
 
 窗口属性  
 对象事件  

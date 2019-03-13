@@ -4,23 +4,62 @@
     <meta charset="UTF-8">
     <title>计算器</title>
     <style type="text/css">
-        #table {
-            width: 30%;
-            height: 50%;
-            background-color: cornflowerblue;
-
+        .img {
+            width: 80%;
+            display: inline-block;
+            height: 300px;
+            float: bottom;
+        }
+        .cir {
+            width: 10px;
+            height: 10px;
+            float: left;
+            margin-left: auto;
+            margin-right: auto;
         }
     </style>
+    <script>
+        function change(num) {
+            switch (num) {
+                case 1:
+                    document.getElementById("imgsrc").setAttribute("src", "../image/001.jpg");
+                    document.getElementById("1").setAttribute("src", "../image/oncir.png");
+                    document.getElementById("2").setAttribute("src", "../image/cir.png");
+                    document.getElementById("3").setAttribute("src", "../image/cir.png");
+                    break;
+                case 2:
+                    document.getElementById("imgsrc").setAttribute("src", "../image/002.png");
+                    document.getElementById("2").setAttribute("src", "../image/oncir.png");
+                    document.getElementById("1").setAttribute("src", "../image/cir.png");
+                    document.getElementById("3").setAttribute("src", "../image/cir.png");
+                    break;
+                case 3:
+                    document.getElementById("imgsrc").setAttribute("src", "../image/003.png");
+                    document.getElementById("3").setAttribute("src", "../image/oncir.png");
+                    document.getElementById("1").setAttribute("src", "../image/cir.png");
+                    document.getElementById("2").setAttribute("src", "../image/cir.png");
+                    break;
+
+
+            }
+
+        }
+    </script>
 </head>
 <body>
-<div style="text-align: center">
-    <div style="display: inline-block; ">
-        <textarea style="background-color: aliceblue;width: auto;height: 30%">
+<div style="text-align: center;width: max-content">
+    <img src="../image/004.png" alt="img" class="img" id="imgsrc">
 
-        </textarea>
 
-    </div>
 
 </div>
+<div style="width: 30px;margin-right: auto;margin-left: auto">
+
+        <img src="../image/cir.png" class="cir" id="1" onmousemove="change(1)">
+        <img src="../image/cir.png" class="cir" id="2" onmousemove="change(2)">
+        <img src="../image/cir.png" class="cir" id="3" onmousemove="change(3)">
+
+</div>
+
 </body>
 </html>
